@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission form</title>
+  <link rel="stylesheet" href="admission.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Admission Form</h1>
+    </div>
+      <form class="form" action="AddmissionServlet" method="post" onsubmit="return validateAddmission()"> 
+      <div class="form-control">
+        <label for="name">Names</label>
+        <input id="name" type="text" name="names" />
+        <div><span id="nameError"></span></div>
+      
+      </div>
+      <div class="form-control">
+        <label for="id">National ID</label>
+        <input id="Id" type="number" name="nationalID" />
+        <div><span id="IdError"></span></div>   
+      </div>
+        
+      <div class="form-control">
+        <label for="country">Nationality</label>
+        <input id="country" type="text" name="nationality">
+        <div><span id="countryError"></span></div> 
+      </div>
+
+      <div class="form-control">
+        <label for="phonenumber">Phone number</label>
+        <input id="phone" type="tel" name="phoneNumber" />
+        <div><span id="phoneError"></span></div>   
+      </div>
+
+      <div class="form-control">
+        <label for="Dob">Date of birth</label>
+        <input id="dateofbirth" type="date" name="dob"  />
+        <div><span id="dobError"></span></div>
+
+      </div>
+    
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input id="emailtxt" type="text" name="email" />
+        <div><span id="emailtxtError"></span></div>
+    
+      </div>
+
+      <div class="box">
+        <label for="gender">Gender</label>
+        <select id="gendertxt" name="gender" class="format" >
+          <option selected disabled value="-1">--Select--</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female </option>
+        </select>
+        <div><span id="gendertxtError"></span></div>
+      </div>
+
+      <div class="box">
+        <label for="qualification"> Qualification</label>
+        <select id="qualificationtxt" name="qualification" class="format" >
+          <option selected disabled value="-1">--Select--</option>
+          <option value="Diploma">Diploma</option>
+          <option value="level 1">level 1</option>
+          <option value="level 2">level 2</option>
+          <option value="level 3">level 3</option>
+        </select>
+        <div><span id="qualificationtxtError"></span></div>
+      </div>
+
+      <div class="box">
+        <label for="Faculty"> Faculty</label>
+        <select id="facultytxt" name="faculty" class="format">
+          <option selected disabled value="-1">--Select--</option>
+          <option value="IT">IT</option>
+          <option value="Education">Education</option>
+          <option value="Science">Science</option>
+          <option value="Accounting">Accounting</option>
+        </select>
+        <div><span id="facultytxtError"></span></div>
+      </div>
+
+      <div class="box">
+        <label for="department">Department</label>
+        <select id="departmenttxt" name="department" class="format">
+          <option selected disabled value="-1">--Select--</option>
+          <option value="Software Engineering">Software Engineering</option>
+          <option value="Information_Managment">Information_Managment</option>
+          <option value="Networking">Networking</option>
+          <option value="None">None</option>
+        </select>
+        <div><span id="departmenttxtError"></span></div>
+      </div>
+        
+      <div class="box">
+          <div> <label for="picture">Upload Picture</label></div>
+          <input type="file"  accept="image/png,image/jpg"  name="picture" id="file"  onchange="loadFile(event)">
+             <div><span id="fileError"></span></div>
+            <p><img id="output" width="120" height="80" /></p>
+            
+            <script>
+            var loadFile = function(event) {
+              var image = document.getElementById('output');
+              image.src = URL.createObjectURL(event.target.files[0]);
+            };
+            </script>
+       
+      </div>
+
+      <div class="box">
+        <div><label for="diploma">Diploma</label></div>
+        <input id="diplomadoc" type="file" name="diploma" accept="application/pdf" onchange="readURL(this)" accept="file/pdf">
+        <div><span id="diplomaError"></span></div>
+        <div class="display-pdf"></div>
+      </div>
+
+      <div class="form-control">
+        <input class="button" type="submit" value="submit" />
+      </div>
+      <div class="form-section">
+
+        <p>Do you want to log in? <a href="login.html">log in</a> </p>
+    </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="admission.js"></script>
+</body>
+
+</html>

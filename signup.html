@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="r">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp form</title>
+    <link rel="stylesheet" href="signup.css">
+
+</head>
+
+<body>
+    <div class="form-box">
+        <form class="form" onsubmit="return validate()">
+            <span class="title">Sign up</span>
+            <span class="subtitle">Create a free account with your email.</span>
+            <div class="form-container">
+                <div>
+                    <input type="text" id="fname" class="input" placeholder="First name">
+                    <span id="fnameError"></span>
+                </div>
+
+                <div>
+                    <input type="text" id="lname" class="input" placeholder="Last name">
+                    <span id="lnameError"></span>
+                </div>
+
+                <div>
+                    <input type="email" id="email" class="input" placeholder="Email">
+                    <span id="emailError"></span>
+                </div>
+
+                <div>
+                    <input type="password" id="pass" class="input" placeholder="Password">
+                    <span id="passError"></span>
+                </div>
+            </div>
+            <button>Sign up</button>
+        </form>
+        <div class="form-section">
+            <p>Have an account? <a href="login.html">Log in</a> </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="signup.js"></script>
+</body>
+
+</html>

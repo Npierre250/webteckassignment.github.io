@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="form-box">
+        <form class="form" onsubmit="return validation()">
+            <span class="title">Log in</span>
+            <span class="subtitle">Log in account with your email.</span>
+            <div class="form-container">
+               
+                <input type="email" id="emailtxt" class="input" placeholder="Email">
+                <div >
+                    <span id="userError"></span>
+                </div>
+                <input type="password" id="pass" class="input" placeholder="Password">
+                <div >
+                    <span id="passError"></span>
+                </div>
+            </div>
+            <div><a id="links" href="update.html">Forgot password</a></div>
+            
+            <button >log in</button>
+            
+            
+        </form>
+        <div class="form-section">
+
+
+            <p>You don't have an account? <a href="signup.html">Sign up</a> </p>
+
+    <div class="form-section2">
+        <p>Registration form  <a href="admission.html">admission form</a> </p>
+    </div>
+    <script type="text/javascript" src="login.js"> </script>
+
+    
+   
+</body>
+
+</html>
